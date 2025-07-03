@@ -1,5 +1,5 @@
 body {
-    background-color: #007bff;
+    background-color: #000084;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,7 +38,7 @@ input[type="email"],
 input[type="password"],
 button {
     width: 100%;
-    padding: 6px;
+    padding: 5px;
     margin-top: 4px;
     border-radius: 4px;
     box-sizing: border-box; 
@@ -53,10 +53,12 @@ input[type="checkbox"] {
 
 button {
     background-color: #007bff;
+    padding: 10px;
     color: white;
     border: none;
     cursor: pointer;
-    font-size: 16px;
+    font-family: 'Jacquard 24', sans-serif;
+    font-size: 25px;
 }
 
 button:hover {
@@ -72,4 +74,12 @@ input:focus {
     display: flex;
     justify-content: space-between;
     gap:5px;
+}
+
+.logo-container {
+    text-align: center;
+}
+.logo-container img {
+    width: 100px;
+    height: auto;
 }
