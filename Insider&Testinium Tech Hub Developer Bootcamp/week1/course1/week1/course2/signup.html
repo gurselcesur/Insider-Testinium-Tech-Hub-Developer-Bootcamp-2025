@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Ol</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jacquard+24&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <div class="form-container">
+            <div style="text-align: center;">
+                <img src="autobots-logo.png" alt="Autobot Logo" style="width: 100px; height: auto;">
+            </div>
+            <h1>Hesap Oluştur</h1>
+            <form action="/api/signup" method="POST">
+                <div class="name-container">
+                    <div>
+                        <label for="name"> <b>Ad:</b></label>
+                        <input type="text" id="name" name="name" placeholder="Gürsel" required>
+                    </div>
+                    <div>
+                        <label for="surname"> <b>Soyad:</b></label>
+                        <input type="text" id="surname" name="surname" placeholder="Cesur" required>
+                    </div>
+                </div>
+                <br />
+                <div>
+                    <label for="email"> <b>E-posta:</b></label>
+                    <input type="email" id="email" name="email" placeholder="ornek@email.com" required>
+                </div>
+                <br />
+                <div>
+                    <label for="password"><b>Parola:</b></label>
+                    <input type="password" id="password" name="password" placeholder="Şifrenizi girin" required>
+                </div>
+                <br />
+                <div>
+                    <label for="confirm-password"><b>Parola Onayı:</b></label>
+                    <input type="password" id="confirm-password" name="confirm-password"
+                        placeholder="Şifrenizi onaylayın" required>
+                </div>
+                <br />
+                <div>
+                    <button type="submit"><strong>Hesabı Oluştur</strong></button>
+                </div>
+                <br />
+                <p>Zaten bir hesabın var mı? <a href="login.html" target="_self">Giriş Yap</a></p>
+            </form>
+        </div>
+
+    </main>
+    <footer></footer>
+</body>
+
+</html>
