@@ -1,0 +1,134 @@
+
+header h1 {
+    text-align: center;
+    color: #000000;
+    font-size: 2.5em;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+    gap: 16px;
+    padding: 32px;
+}
+
+.product-card {
+    background-color: #ededed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+
+}
+
+.product-card:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.6s ease;
+}
+
+.product-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.sold-out {
+    background-color: rgba(255, 0, 0, 0.8);
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 0.8em;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8px;
+}
+
+.product-info h3 {
+    font-size: 1.2em;
+    font-family: 'Arial', sans-serif;
+    color: #000000;
+    margin: 8px 0px;
+}
+
+.product-info p {
+    font-size: 1.1em;
+    font-family: 'Arial', sans-serif;
+    color: #3FDF5A;
+    margin: 4px 0px;
+}
+
+.product-info button {
+    align-self: flex-end;
+    background: linear-gradient(90deg, #000000 40%, #ffffff 50%);
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    background-size: 300%;
+    background-position: right;
+    color: #000000;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-position 0.6s ease, color 0.5s ease;
+}
+
+.product-info button:hover {
+    background-position: left;
+    color: #ffffff;
+}
+
+@keyframes soft-shake {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-3px); }
+  50%  { transform: translateX(3px); }
+  75%  { transform: translateX(-2px); }
+  100% { transform: translateX(0); }
+}
+
+.product-card:hover .sold-out {
+  animation: soft-shake 1s ease-in-out 3;
+}
+
+
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
