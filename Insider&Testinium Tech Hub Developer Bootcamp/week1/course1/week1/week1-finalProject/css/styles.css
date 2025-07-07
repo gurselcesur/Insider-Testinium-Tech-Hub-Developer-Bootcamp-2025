@@ -1,0 +1,77 @@
+@import url(header.css);
+@import url(footer.css);
+@import url(sections.css);
+@import url(home.css);
+@import url(why.css);
+@import url(characters.css);
+@import url(episodes.css);
+@import url(about.css);
+
+
+
+
+body {
+  background: #388237;
+  background: linear-gradient(90deg, rgba(56, 130, 55, 1) 0%, rgba(59, 59, 117, 1) 22%, rgba(22, 26, 48, 1) 52%, rgba(59, 59, 117, 1) 79%, rgba(56, 130, 55, 1) 100%);
+}
+
+html {
+  scroll-padding-top: 90px;
+}
+
+.spotify-floating-player {
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+    z-index: 9999;
+    background: rgba(34, 34, 34, 0.85);
+    backdrop-filter: blur(8px);
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+    padding: 8px 8px 4px 8px;
+    display: flex;
+    align-items: center;
+    transition: box-shadow 0.2s;
+}
+
+.spotify-floating-player iframe {
+    width: 320px;
+    height: 80px;
+    border: none;
+}
+
+@media (max-width: 500px) {
+    .spotify-floating-player {
+        right: 8px;
+        bottom: 8px;
+        border-radius: 10px;
+        padding: 4px 2px 2px 2px;
+    }
+    .spotify-floating-player iframe {
+        width: 95vw;
+        min-width: 0;
+        max-width: 98vw;
+        height: 70px;
+    }
+}
+
+@media (max-width: 600px) {
+    .spotify-floating-player {
+        display: none !important;
+    }
+    main {
+        padding-top: 60px;
+    }
+    .sections-container {
+        padding: 0.5rem;
+        gap: 10px;
+    }
+    .home-content, .why-content, .about-section, .character-grid {
+        padding: 1rem !important;
+        border-radius: 12px !important;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.10) !important;
+    }
+    .character-grid {
+        grid-template-columns: 1fr !important;
+    }
+}

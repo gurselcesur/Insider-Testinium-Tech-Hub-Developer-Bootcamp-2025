@@ -1,0 +1,108 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #222;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border-bottom: #00ff88 2px solid;
+    font-family: 'Arial', sans-serif;
+
+}
+
+.header .logo img {
+    max-height: 80px;
+    height: auto;
+    width: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header .logo img:hover {
+    transform: scale(1.1);
+}
+
+.header .navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header .navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header .navbar ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #00ff88;
+    transition: width 0.3s ease, left 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.header .navbar ul li a:hover {
+    color: #00ff88;
+    transform: translateY(-2px);
+}
+
+.header .navbar ul li a:hover::before {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .header .navbar {
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        position: absolute;
+        top: calc(100% + 2px);
+        left: 0;
+        width: 100%;
+        background-color: #222;
+        transition: max-height 0.3s ease-out;
+    }
+
+    .header .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .header .navbar.open {
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked + .hamburger + .navbar {
+    max-height: 500px;
+}

@@ -1,0 +1,253 @@
+.why {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.why::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: float 20s infinite linear;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(360deg);
+    }
+}
+
+.why-content {
+    max-width: 1200px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.why-content h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    text-align: center;
+    animation: fadeInUp 1s ease-out both;
+}
+
+.why-content h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.why-content p {
+    font-size: 1.1rem;
+    color: #e8f4f8;
+    line-height: 1.8;
+    text-align: left;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+.why-content img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    animation: fadeInRight 1s ease-out 0.8s both;
+    display: block;
+    margin: 2rem auto;
+}
+
+.why-content img:hover {
+    transform: scale(1.05) rotateY(5deg);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+}
+
+.why-text {
+    margin-bottom: 2rem;
+}
+
+.why-text ol {
+    font-size: 1.1rem;
+    color: #e8f4f8;
+    line-height: 1.8;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    padding-left: 2rem;
+    animation: fadeInUp 1s ease-out 0.7s both;
+    margin: 2rem 0;
+    list-style: none;
+    counter-reset: item;
+}
+
+.why-text ol li {
+    margin-bottom: 1.2rem;
+    padding-left: 0;
+    position: relative;
+    counter-increment: item;
+    text-align: left;
+}
+
+.why-text ol li::before {
+    content: counter(item);
+    position: absolute;
+    left: -1.8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.why-text ol li strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.why-text em {
+    color: #ffffff;
+    font-style: italic;
+}
+
+.why-text strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.why-final-image {
+    text-align: left;
+    margin-top: 2rem;
+}
+
+.why-final-image img {
+    margin-bottom: 2rem;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .why-content {
+        padding: 2rem;
+    }
+
+    .why-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .why-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .why-content p {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .why-content img {
+        max-width: 350px;
+    }
+
+    .why-text ol {
+        font-size: 1rem;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+    }
+
+    .why-text ol li {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .why {
+        padding: 1rem;
+    }
+
+    .why-content {
+        padding: 1.5rem;
+    }
+
+    .why-content h2 {
+        font-size: 2rem;
+    }
+
+    .why-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .why-content p {
+        font-size: 0.9rem;
+    }
+
+    .why-content img {
+        max-width: 320px;
+    }
+
+    .why-text ol {
+        font-size: 0.9rem;
+        padding-left: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    .why-text ol li {
+        margin-bottom: 0.8rem;
+    }
+
+    .why-text ol li::before {
+        left: -1.5rem;
+    }
+}

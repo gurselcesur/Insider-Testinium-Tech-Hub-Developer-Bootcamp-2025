@@ -1,0 +1,71 @@
+.episodes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.episode-card {
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid transparent;
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.episode-card:hover {
+    transform: translateY(-5px);
+    border-color: #00ff88;
+    box-shadow: 0 15px 35px rgba(0, 250, 117, 0.3);
+}
+
+.episode-video {
+    width: 100%;
+    height: 250px;
+    border: none;
+}
+
+.episode-info {
+    padding: 1.5rem;
+}
+
+.episode-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #00ff88;
+}
+
+.episode-info p {
+    font-size: 0.9rem;
+}
+
+.favorite-btn {
+    margin: 1rem auto 1.2rem auto;
+    display: block;
+    padding: 10px 24px;
+    background: #00ff88;
+    color: #222;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,255,136,0.08);
+}
+
+.favorite-btn:hover, .favorite-btn.favorited {
+    background: #222;
+    color: #00ff88;
+    border: 2px solid #00ff88;
+}
+
+.episode-card.favorited {
+    background: rgba(0, 255, 136, 0.233);
+    border-color: #00ff88;
+    box-shadow: 0 0 24px 0 rgba(0,255,136,0.18);
+    transition: background 0.3s, box-shadow 0.3s, border-color 0.3s;
+}

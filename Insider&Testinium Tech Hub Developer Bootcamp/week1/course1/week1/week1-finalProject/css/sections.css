@@ -1,0 +1,18 @@
+main {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sections-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #fff;
+    text-align: left;
+    padding: 1.2rem;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}

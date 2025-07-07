@@ -1,0 +1,47 @@
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.character-card {
+    text-align: center;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+    gap: 1rem;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 2.5rem 2rem;
+}
+
+.character-card:hover {
+    transform: translateY(-5px);
+    border-color: #00ff88;
+    box-shadow: 0 15px 35px rgba(0, 250, 117, 0.3);
+}
+
+.character-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.character-card:hover .character-image {
+    transform: scale(1.18);
+    border-radius: 20px;
+}
+
+.character-image.summer {
+    object-position: top;
+}
