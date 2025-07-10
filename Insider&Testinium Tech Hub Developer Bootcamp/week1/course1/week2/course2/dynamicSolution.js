@@ -2,7 +2,6 @@
 // Thanks to algorithm analysis class CS333
 // Longest Collatz Sequence under 1,000,000: { value: 837799, length: 525 }
 // [Done] exited with code=0 in 0.23 seconds
-// Difference from the previous solution ):
 
 function collatzSequenceLength(limit) {
     let longestSequence = 1;
