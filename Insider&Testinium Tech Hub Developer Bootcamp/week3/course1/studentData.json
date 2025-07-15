@@ -1,0 +1,16 @@
+{
+  "students": [
+    {
+      "id": "2021001",
+      "name": "Mehmet Demir",
+      "faculty": "engineering",
+      "gpa": 3.25
+    },
+    {
+      "id": "2021002", 
+      "name": "Ayşe Kaya",
+      "faculty": "business",
+      "gpa": 3.80
+    }
+  ]
+}
